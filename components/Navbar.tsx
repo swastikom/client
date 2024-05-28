@@ -18,7 +18,7 @@ import { FaCoins } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <div className="fixed w-full bg-[#f6f8fe] items-center flex-col justify-center">
+    <div className="fixed w-full bg-[#f6f8fe] items-center flex-col justify-center z-50">
       <div className="flex items-center justify-around pt-6 pb-6 ">
         <Link href="/" className="font-bold text-xl">
           LOGO
@@ -29,7 +29,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="items-center justify-center w-full flex pb-3">
-      <div className=" bg-blue-600 ml-6 mr-6 shadow-md p-5 rounded-2xl flex items-center gap-2 w-fit justify-center" >
+      <div className=" bg-blue-600 ml-6 mr-6 shadow-lg p-5 rounded-2xl flex items-center gap-3 w-fit justify-center" >
         <Link href={"/"} className="tool-buttons"><FaTableList />
 Leader Board</Link>
         <DropDown/>

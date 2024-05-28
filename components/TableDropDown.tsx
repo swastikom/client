@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { MdOutlineWorkHistory } from "react-icons/md";
 
-const DropDown = () => {
+const TableDropDown = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleMouseEnter = () => {
@@ -17,13 +17,13 @@ const DropDown = () => {
   return (
     <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="relative inline-block">
       <button
-        id="dropdownHoverButton"
-        data-dropdown-toggle="dropdownHover"
-        data-dropdown-trigger="hover"
-        className="text-white gap-1 hover:bg-blue-500 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 hover:rounded-2xl"
+        id="TableDropDownHoverButton"
+        data-TableDropDown-toggle="TableDropDownHover"
+        data-TableDropDown-trigger="hover"
+        className="text-slate-700 text-lg gap-1 bg-white border-slate-200 bw hover:bg-slate-100 focus:outline-none font-medium rounded-xl px-6 py-2.5 text-center inline-flex items-center hover:rounded-xl"
         type="button"
       >
-        <MdOutlineWorkHistory /> Historical Trading{" "}
+        Slippage{" "}
         <svg
           className="w-2.5 h-2.5 ms-3"
           aria-hidden="true"
@@ -42,43 +42,35 @@ const DropDown = () => {
       </button>
 
       <div
-        id="dropdownHover"
+        id="TableDropDownHover"
         className={`z-10 ${isOpen ? 'block' : 'hidden'} bg-white divide-y divide-gray-100 rounded-xl shadow w-44 dark:bg-gray-700 absolute`}
       >
         <ul
           className="py-2 text-sm text-gray-700 dark:text-gray-200"
-          aria-labelledby="dropdownHoverButton"
+          aria-labelledby="TableDropDownHoverButton"
         >
           <li>
             <Link
               href="#"
-              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              className="block text-lg px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
             >
-              Dashboard
+              0 %
             </Link>
           </li>
           <li>
             <Link
               href="#"
-              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              className="block px-4 py-2 text-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
             >
-              Settings
+              0.5 %
             </Link>
           </li>
           <li>
             <Link
               href="#"
-              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              className="block text-lg px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
             >
-              Earnings
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#"
-              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-            >
-              Sign out
+              1 %
             </Link>
           </li>
         </ul>
@@ -87,4 +79,4 @@ const DropDown = () => {
   );
 };
 
-export default DropDown;
+export default TableDropDown;

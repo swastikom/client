@@ -2,26 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components
-{
-  .nav-buttons{
-    @apply bg-blue-600  text-white p-2 border-none outline-none rounded-lg pl-4 pr-4  hover:bg-blue-500
-  }
+@layer base{
   .tool-buttons{
-    @apply rounded-lg font-medium text-[15px] px-5 py-2.5 text-center inline-flex items-center hover:bg-blue-500 text-white gap-1
+    @apply text-white gap-1 hover:bg-blue-500 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 hover:rounded-2xl
   }
+  .nav-buttons{
+    @apply shadow-lg px-5 py-2.5 bg-blue-600 text-white  hover:bg-blue-500 focus:outline-none font-medium rounded-xl
+  }
+  .table-header{
+    @apply p-1 font-semibold items-center justify-center text-white w-[10em]
+  }
+  .row-cell{
+    @apply p-1 font-semibold items-center justify-center text-slate-600 w-[10em]
+  } 
 }
-
-/* styles/globals.css */
-
-
-body {
-  background-color: #f6f8fe;
-  margin: 0;
-  font-family: Arial, sans-serif;
+body{
   height: 100vh;
-}
-
-h1 {
-  color: #333;
+  background-color: #f6f8fe;
 }
